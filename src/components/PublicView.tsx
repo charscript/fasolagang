@@ -29,7 +29,7 @@ export const PublicView: React.FC<PublicViewProps> = ({ memes, members, latestMe
         currentPage * ITEMS_PER_PAGE
     );
 
-    const uniqueAuthors = [...new Set(memes.map(m => m.author))];
+
 
     const getYoutubeId = (url: string) => {
         const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
