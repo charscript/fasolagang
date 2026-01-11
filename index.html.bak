@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Archivo [DARK MODE] - Memes & Caos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* --- ESTÉTICA DARK / HACKER --- */
+        body {
+            background-color: #000000;
+            font-family: 'Verdana', sans-serif;
+            font-size: 12px;
+            color: #cccccc; /* Gris claro para texto */
+            /* Patrón de fondo "Starfield" o ruido oscuro */
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+        }
+
+        /* Título ASCII Rojo */
+        .ascii-art {
+            font-family: 'Courier New', monospace;
+            white-space: pre;
+            font-weight: bold;
+            line-height: 10px;
+            text-align: center;
+            color: #ff0000;
+            text-shadow: 0 0 5px #8b0000;
+        }
+
+        /* Bordes estilo "Dark Bevel" */
+        .bevel-out {
+            border-top: 2px solid #666; /* Luz tenue arriba */
+            border-left: 2px solid #666;
+            border-right: 2px solid #000; /* Sombra dura abajo */
+            border-bottom: 2px solid #000;
+            background-color: #333; /* Gris oscuro para paneles */
+            box-shadow: 2px 2px 0px #000;
+        }
+
+        .bevel-in {
+            border-top: 2px solid #000; /* Sombra interior arriba */
+            border-left: 2px solid #000;
+            border-right: 2px solid #555; /* Luz interior abajo */
+            border-bottom: 2px solid #555;
+            background-color: #111; /* Casi negro para inputs/pantallas */
+        }
+
+        /* Botones Oscuros */
+        .btn-retro {
+            background: #444;
+            color: #fff;
+            border-top: 2px solid #777;
+            border-left: 2px solid #777;
+            border-right: 2px solid #000;
+            border-bottom: 2px solid #000;
+            padding: 4px 12px;
+            cursor: pointer;
+            font-family: 'Tahoma', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 11px;
+            transition: all 0.1s;
+        }
+        
+        .btn-retro:active {
+            border-top: 2px solid #000;
+            border-left: 2px solid #000;
+            border-right: 2px solid #777;
+            border-bottom: 2px solid #777;
+            background: #222;
+            color: #ff0000;
+        }
+        
+        .btn-retro:hover {
+            color: #ff0000;
+        }
+
+        /* Enlaces estilo "Evil" */
+        a {
+            color: #ff4444; /* Rojo brillante */
+            text-decoration: underline;
+        }
+        a:visited {
+            color: #aa0000; /* Rojo sangre oscuro */
+        }
+        a:hover {
+            background-color: #ff0000;
+            color: #000;
+            text-decoration: none;
+            cursor: crosshair; /* Cursor de mira */
+        }
+
+        /* Scrollbar Roja/Oscura */
+        ::-webkit-scrollbar {
+            width: 16px;
+            background: #222;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8b0000;
+            border: 1px solid #ff0000;
+        }
+        ::-webkit-scrollbar-button {
+            background: #000;
+        }
+
+        /* Animaciones Retro */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            background: #500000; /* Fondo rojo muy oscuro */
+            color: #ffcccc;
+            border-top: 1px solid #ff0000;
+            border-bottom: 1px solid #ff0000;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            padding: 2px 0;
+        }
+        .marquee-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Clases de utilidad para "Movimiento" sin imágenes */
+        .blink {
+            animation: blinker 1s linear infinite;
+        }
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+
+        .spin-slow {
+            animation: spin 4s linear infinite;
+        }
+        @keyframes spin { 
+            100% { transform: rotate(360deg); } 
+        }
+
+        /* Estilos específicos widgets */
+        .winamp-bar {
+            background: linear-gradient(to right, #8b0000, #ff0000); /* Degradado rojo */
+            color: black;
+            font-weight: bold;
+            font-size: 10px;
+            padding: 2px 4px;
+            letter-spacing: 1px;
+        }
+
+        .pixel-counter {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: #ff0000;
+            padding: 2px 8px;
+            border: 2px inset #555;
+            font-size: 16px;
+            letter-spacing: 4px;
+            display: inline-block;
+            text-shadow: 0 0 5px #ff0000;
+        }
+
+        /* Separadores GIF simulados con CSS */
+        .construction-bar {
+            height: 10px;
+            background: repeating-linear-gradient(
+                45deg,
+                #000,
+                #000 10px,
+                #ffcc00 10px,
+                #ffcc00 20px
+            );
+            border: 1px solid #fff;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-2 md:p-4">
+
+    <!-- HEADER / BANNER -->
+    <div class="max-w-5xl mx-auto mb-4 bevel-out p-1 bg-[#333]">
+        <div class="marquee-container bevel-in border-none mb-2">
+            <span class="marquee-text">+++ BIENVENIDO A LA ZONA OSCURA +++ NO APAGUES TU ORDENADOR +++ SUBIDAS ANÓNIMAS ACTIVADAS +++ LOS EYES TE VIGILAN +++</span>
+        </div>
+        
+        <header class="bg-black bevel-in p-6 flex flex-col items-center justify-center text-center relative overflow-hidden">
+            <!-- Fondo animado sutil con CSS -->
+            <div class="absolute inset-0 opacity-10 pointer-events-none" style="background: repeating-linear-gradient(0deg, transparent, transparent 2px, #ff0000 4px);"></div>
+
+            <!-- Imágenes Decorativas Header -->
+            <div class="absolute top-2 left-4 hidden md:block">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjI1eDRyNHZ5eHRyNHZ5eHRyNHZ5eHQ2eHRyNHZ5eHRyNHZ5eHQ2eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/duzpaTbCUy9Vu/giphy.gif" alt="Spinning Skull" class="w-12 h-12">
+            </div>
+            <div class="absolute top-2 right-4 hidden md:block">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjI1eDRyNHZ5eHRyNHZ5eHRyNHZ5eHQ2eHRyNHZ5eHRyNHZ5eHQ2eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/duzpaTbCUy9Vu/giphy.gif" alt="Spinning Skull" class="w-12 h-12">
+            </div>
+
+             <!-- Arte ASCII para el título -->
+            <pre class="ascii-art text-[8px] md:text-[10px] hidden md:block z-10">
+  ______   _______    ______   __    __  ______  __     __   ______  
+ /      \ /       \  /      \ /  |  /  |/      |/  |   /  | /      \ 
+/$$$$$$  |$$$$$$$  |/$$$$$$  |$$ |  $$ |$$$$$$/ $$ |   $$ |/$$$$$$  |
+$$ |__$$ |$$ |__$$ |$$ |  $$/ $$ |__$$ |  $$ |  $$ |   $$ |$$ |  $$ |
+$$    $$ |$$    $$< $$ |      $$    $$ |  $$ |  $$  \ /$$/ $$ |  $$ |
+$$$$$$$$ |$$$$$$$  |$$ |   __ $$$$$$$$ |  $$ |   $$  /$$/  $$ |  $$ |
+$$ |  $$ |$$ |  $$ |$$ \__/  |$$ |  $$ | _$$ |_   $$ $$/   $$ \__$$ |
+$$ |  $$ |$$ |  $$ |$$    $$/ $$ |  $$ |/ $$   |   $$$/    $$    $$/ 
+$$/   $$/ $$/   $$/  $$$$$$/  $$/   $$/ $$$$$$/     $/      $$$$$$/  
+            </pre>
+            
+            <h1 class="md:hidden text-3xl font-bold font-mono text-red-600 tracking-widest uppercase border-b-2 border-red-800 pb-1 z-10 flicker">El Archivo</h1>
+            <p class="mt-2 text-xs text-red-400 font-mono z-10 blink">>> ESTABLECIENDO CONEXIÓN SEGURA... <<</p>
+        </header>
+
+        <!-- Navbar simple -->
+        <nav class="mt-1 flex justify-center flex-wrap gap-2 text-sm font-bold bg-[#333] p-1 border-t border-black">
+            <button class="btn-retro" onclick="resetFilter()">[☠️ Inicio ]</button>
+            <button class="btn-retro">[🔥 Subir ]</button>
+            <button class="btn-retro">[👁️ Top Secret ]</button>
+            <button class="btn-retro">[✉️ Email ]</button>
+        </nav>
+    </div>
+
+    <!-- MAIN LAYOUT -->
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
+
+        <!-- SIDEBAR (IZQUIERDA) -->
+        <aside class="space-y-4">
+            
+            <!-- Widget: Filtro de Amigos -->
+            <div class="bevel-out p-1">
+                <div class="winamp-bar mb-2 flex justify-between items-center">
+                    <span>FRIENDS_LIST.TXT</span>
+                    <span class="cursor-pointer font-mono font-bold">X</span>
+                </div>
+                <div class="p-2 space-y-2 bg-black bevel-in">
+                    <ul id="friends-list" class="list-none space-y-1 text-xs font-mono">
+                        <!-- JS insertará amigos aquí -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- GIFS DECORATIVOS -->
+            <div class="text-center space-y-2">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDVlZmEzNzI4ZjgwNDc0NjA4ODc5OTExYWM2NDQ2YjE5ZGU5ZGU5ZSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/LpW8KyCkDhteg/giphy.gif" alt="Fire" class="mx-auto w-full h-12 object-cover border border-red-900">
+                <div class="flex justify-center gap-2">
+                     <img src="https://media.giphy.com/media/sIIhZ104wh1w9q1n4A/giphy.gif" alt="Bat" class="w-8">
+                     <img src="https://media.giphy.com/media/sIIhZ104wh1w9q1n4A/giphy.gif" alt="Bat" class="w-8">
+                </div>
+            </div>
+
+            <!-- Widget: Reproductor de Música Fake -->
+            <div class="bevel-out p-1">
+                <div class="winamp-bar mb-1">DARKAMP v1.0</div>
+                <div class="bg-black p-2 mb-1 border border-gray-600">
+                    <div class="text-red-500 font-mono text-xs marquee-container border-none bg-transparent p-0">
+                        <span class="marquee-text" style="animation-duration: 5s;">01. RAMMSTEIN - DU HAST.mp3 *** 128kbps *** </span>
+                    </div>
+                    <div class="text-red-500 font-mono text-xs text-right mt-1">03:45</div>
+                    
+                    <!-- Visualizador falso -->
+                    <div class="flex items-end gap-[1px] h-4 mt-1 opacity-70">
+                        <div class="w-1 bg-red-600 h-[80%]"></div>
+                        <div class="w-1 bg-red-600 h-[40%]"></div>
+                        <div class="w-1 bg-red-600 h-[90%]"></div>
+                        <div class="w-1 bg-red-600 h-[60%]"></div>
+                        <div class="w-1 bg-red-600 h-[30%]"></div>
+                        <div class="w-1 bg-red-600 h-[70%]"></div>
+                        <div class="w-1 bg-red-600 h-[50%]"></div>
+                        <div class="w-1 bg-red-600 h-[100%]"></div>
+                        <div class="w-1 bg-red-600 h-[40%]"></div>
+                        <div class="w-1 bg-red-600 h-[60%]"></div>
+                    </div>
+                </div>
+                <div class="flex gap-1 justify-center">
+                    <button class="btn-retro text-[9px] w-6 bg-gray-700">◄</button>
+                    <button class="btn-retro text-[9px] w-6 bg-gray-700">►</button>
+                    <button class="btn-retro text-[9px] w-6 bg-gray-700">■</button>
+                    <div class="w-full bevel-in bg-black h-4 relative">
+                        <div class="absolute top-0 left-0 h-full w-2/3 bg-red-800"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Widget: Contador -->
+            <div class="text-center mt-4 bevel-out p-2">
+                <p class="text-[10px] mb-1 font-bold text-gray-400">ALMAS RECOLECTADAS:</p>
+                <div class="pixel-counter">666342</div>
+            </div>
+            
+            <!-- Badges -->
+            <div class="text-center mt-4 space-y-1">
+                <div class="inline-block border border-gray-500 bg-black text-white text-[9px] px-1 font-mono">NOTEPAD MADE</div>
+                <div class="inline-block border border-gray-500 bg-black text-white text-[9px] px-1 font-mono">IE 5.0 REJECTED</div>
+            </div>
+
+        </aside>
+
+        <!-- FEED CENTRAL -->
+        <main class="md:col-span-3">
+            
+            <div class="bevel-out p-1 min-h-[500px] bg-[#222]">
+                <div class="bg-gradient-to-r from-black to-[#500000] text-red-500 px-2 py-1 font-bold flex justify-between items-center mb-4 border-b border-red-900">
+                    <span>FEED PRINCIPAL :: <span id="current-filter" class="text-white">TODOS</span></span>
+                    <div class="flex gap-1">
+                        <button class="w-3 h-3 bg-gray-400 border border-white border-b-black border-r-black"></button>
+                        <button class="w-3 h-3 bg-gray-400 border border-white border-b-black border-r-black text-black text-[8px] flex items-center justify-center leading-none font-bold">X</button>
+                    </div>
+                </div>
+
+                <!-- Lista de Posts -->
+                <div id="meme-feed" class="space-y-6 p-2">
+                    <!-- Los memes se cargan aquí vía JS -->
+                </div>
+                
+                <div class="construction-bar"></div>
+
+                <!-- Paginación -->
+                <div class="flex justify-center gap-2 mt-8 mb-4">
+                    <span class="font-bold text-xs pt-1 text-gray-400">Páginas:</span>
+                    <a href="#" class="font-bold bg-black text-red-500 border border-red-500 px-2">[1]</a>
+                    <a href="#">[2]</a>
+                    <a href="#">[3]</a>
+                    <a href="#">[Siguiente >>]</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="max-w-5xl mx-auto mt-4 text-center text-[10px] text-gray-500 pb-8 font-mono">
+        <div class="flex justify-center mb-2">
+             <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2Q5ZGU5ZGU5ZGU5ZGU5ZGU5ZGU5ZGU5ZGU5ZGU5ZGU5ZGU5ZGU5ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/LpW8KyCkDhteg/giphy.gif" class="h-4 w-full opacity-50">
+        </div>
+        <p class="text-red-800 font-bold">&copy; 1999-2025 EL ARCHIVO.</p>
+        <p>Optimizado para resoluciones 800x600 y monitores CRT.</p>
+        <p class="mt-2 text-xs">
+            <span class="blink">_</span>
+        </p>
+    </footer>
+
+    <!-- LOGICA JAVASCRIPT (Igual lógica, cambios cosméticos en render) -->
+    <script>
+        // --- 1. DATOS DE PRUEBA ---
+        const memesData = [
+            {
+                id: 666,
+                url: "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?auto=format&fit=crop&q=80&w=400&h=300",
+                title: "Cuando sale Batman a las 3AM",
+                author: "Carlos",
+                date: "12 Oct 2024, 23:42",
+                tags: ["fiesta", "fail"],
+                comments: 3
+            },
+            {
+                id: 23,
+                url: "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?auto=format&fit=crop&q=80&w=400&h=400",
+                title: "El setup 'minimalista' de Javi",
+                author: "Javier",
+                date: "10 Oct 2024, 15:20",
+                tags: ["tech", "cringe", "pc"],
+                comments: 12
+            },
+            {
+                id: 13,
+                url: "https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?auto=format&fit=crop&q=80&w=400&h=300",
+                title: "La cara del gato cuando abrimos el atún",
+                author: "Sofía",
+                date: "08 Oct 2024, 09:15",
+                tags: ["gatos", "random"],
+                comments: 5
+            },
+            {
+                id: 4,
+                url: "https://images.unsplash.com/photo-1563461660947-507ef3a36f54?auto=format&fit=crop&q=80&w=400&h=300",
+                title: "Intento de cocina nivel: Chernobyl",
+                author: "Carlos",
+                date: "05 Oct 2024, 20:00",
+                tags: ["comida", "peligro"],
+                comments: 1
+            },
+            {
+                id: 5,
+                url: "https://images.unsplash.com/photo-1594322436404-5a0526db4d13?auto=format&fit=crop&q=80&w=400&h=350",
+                title: "POV: Se cayó el servidor otra vez",
+                author: "Ana",
+                date: "01 Oct 2024, 11:30",
+                tags: ["trabajo", "sad"],
+                comments: 8
+            }
+        ];
+
+        // --- 2. RENDERIZADO DEL FEED ---
+        const feedContainer = document.getElementById('meme-feed');
+        const filterTitle = document.getElementById('current-filter');
+
+        function renderMemes(filterAuthor = null) {
+            feedContainer.innerHTML = ''; 
+            
+            if(filterAuthor) {
+                filterTitle.textContent = "UPLOADS DE: " + filterAuthor.toUpperCase();
+                filterTitle.classList.add('text-red-500', 'blink'); 
+            } else {
+                filterTitle.textContent = "TODOS";
+                filterTitle.classList.remove('text-red-500', 'blink');
+                filterTitle.classList.add('text-white');
+            }
+
+            const filteredData = filterAuthor 
+                ? memesData.filter(m => m.author === filterAuthor)
+                : memesData;
+
+            if (filteredData.length === 0) {
+                feedContainer.innerHTML = `
+                    <div class="text-center p-8 bg-black bevel-in border border-red-500">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2Q5ZGU5ZGU5ZGU5ZGU5ZGU5ZGU5ZGU5ZGU5ZGU5ZGU5ZGU5ZGU5ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/LpW8KyCkDhteg/giphy.gif" class="mx-auto w-12 h-12 mb-4">
+                        <p class="font-bold text-red-600 blink">ERROR FATAL: DATOS NO ENCONTRADOS.</p>
+                        <p class="text-gray-500">El usuario ha sido eliminado de la matrix.</p>
+                        <button class="btn-retro mt-4" onclick="resetFilter()">REINICIAR SISTEMA</button>
+                    </div>
+                `;
+                return;
+            }
+
+            filteredData.forEach(meme => {
+                const post = document.createElement('div');
+                post.className = "bg-[#333] bevel-out p-1 mb-6 relative group"; 
+
+                post.innerHTML = `
+                    <!-- Barra de título -->
+                    <div class="bg-gradient-to-r from-black to-[#300000] text-gray-300 px-2 py-1 text-xs font-bold flex justify-between items-center mb-2 border border-black">
+                        <span class="text-red-400 group-hover:text-white transition-colors">:: ${meme.title}</span>
+                        <span class="font-mono text-[9px] text-gray-600">[ID_REF: ${meme.id}]</span>
+                    </div>
+
+                    <!-- Contenido -->
+                    <div class="bg-black bevel-in p-4 text-center border-t border-l border-black border-r border-b border-[#444]">
+                        <img src="${meme.url}" alt="${meme.title}" class="max-w-full h-auto mx-auto border-2 border-[#333] p-1 hover:border-red-800 transition-colors cursor-crosshair" style="max-height: 400px;">
+                        
+                        <div class="mt-3 text-left border-t border-dashed border-gray-800 pt-2 text-xs">
+                            <p class="mb-1 font-mono text-gray-500">
+                                <span class="font-bold text-red-700">TAGS >></span> 
+                                ${meme.tags.map(tag => `<a href="#">[${tag}]</a>`).join(' ')}
+                            </p>
+                            <p class="text-gray-600 italic text-[9px]">
+                                Uploaded: ${meme.date}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Footer del post -->
+                    <div class="mt-2 flex items-center justify-between px-2 pb-1">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold text-gray-400">USR:</span>
+                            <span class="text-xs font-bold text-red-500 cursor-pointer hover:bg-red-900 hover:text-white px-1 transition-colors" onclick="setFilter('${meme.author}')">
+                                ${meme.author}
+                            </span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="btn-retro text-[9px]">Ping</button>
+                            <button class="btn-retro text-[9px]">Logs (${meme.comments})</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Caja comentarios -->
+                    <div class="mx-2 mt-1 mb-2 bg-[#111] border border-[#444] p-2 h-16 overflow-y-scroll text-[10px] font-mono leading-tight text-gray-400 scrollbar-hide">
+                        <span class="text-red-600 font-bold">SysAdmin:</span> Archivo verificado. Libre de virus.<br>
+                        <span class="text-green-700 font-bold">Hacker_99:</span> nice jpg<br>
+                        <span class="text-blue-700 font-bold">Guest:</span> lol
+                    </div>
+                `;
+                feedContainer.appendChild(post);
+            });
+        }
+
+        // --- 3. RENDERIZADO DE SIDEBAR ---
+        const friendsList = document.getElementById('friends-list');
+
+        function renderSidebar() {
+            const authors = [...new Set(memesData.map(item => item.author))];
+            
+            friendsList.innerHTML = '';
+            
+            authors.forEach(author => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <div class="flex items-center gap-2 group cursor-pointer hover:bg-[#222] p-1 border border-transparent hover:border-gray-800" onclick="setFilter('${author}')">
+                         <div class="w-2 h-2 bg-red-800 group-hover:bg-red-500 rotate-45 transform transition-all"></div>
+                        <span class="text-gray-400 group-hover:text-red-400 font-bold">${author}</span>
+                    </div>
+                `;
+                friendsList.appendChild(li);
+            });
+
+            // Botón "Ver Todos"
+            const liAll = document.createElement('li');
+            liAll.innerHTML = `
+                 <div class="flex items-center gap-2 group cursor-pointer mt-2 border-t border-gray-800 pt-1 hover:bg-[#222] p-1" onclick="resetFilter()">
+                    <span class="text-green-700 font-bold text-xs blink">></span>
+                    <span class="text-red-600 font-bold group-hover:underline">MOSTRAR_TODO</span>
+                </div>
+            `;
+            friendsList.appendChild(liAll);
+        }
+
+        // --- 4. CONTROL ---
+        function setFilter(authorName) {
+            renderMemes(authorName);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function resetFilter() {
+            renderMemes(null);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderSidebar();
+            renderMemes();
+            console.log("%c SYSTEM BREACH DETECTED", "color: red; font-size: 20px; font-weight: bold;");
+        });
+
+    </script>
+</body>
+</html>
